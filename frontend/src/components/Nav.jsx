@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav className={`flex justify-between items-center px-4 py-2 ${scrolled ? 'bg-white' : 'bg-transparent'} fixed w-full transition-all duration-300`}>
-        <span className="text-xl font-bold cursor-pointer">Logo</span>
+        <span className="text-xl font-bold cursor-pointer">LOGO</span>
         <ul className="flex gap-4">
             <li><a href="/">Home</a></li>
             <li><a href="/">About</a></li>

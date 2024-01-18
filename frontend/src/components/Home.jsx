@@ -1,5 +1,7 @@
 import React from 'react';
 
+import FileUpload from './FileUpload';
+
 const Home = () => {
   return (
     <section className='w-screen min-h-screen bg-gradient-to-r from-rose-100 to-teal-100'>
@@ -16,6 +18,11 @@ const Home = () => {
                 <p className='max-w-xl mt-2 text-lg text-slate-600'>
                     Your all-in-one solution for managing and organizing your files with the power of AI.
                 </p>
+
+                <div className='w-full mt-4 border-dashed border-2 rounded'>
+                    <FileUpload />
+                </div>
+                
             </div>
         </div>
     </section>
