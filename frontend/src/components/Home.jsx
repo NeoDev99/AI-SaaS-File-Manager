@@ -2,17 +2,23 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div className="bg-gray-100 min-h-screen flex items-center justify-center">
-      <div className="bg-white p-8 rounded shadow-md max-w-md">
-        <h1 className="text-3xl font-bold mb-4">SaaS AI-based File Manager</h1>
-        <p className="text-gray-600 mb-6">
-          Your all-in-one solution for managing and organizing your files with the power of AI.
-        </p>
-        <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
-          Get Started
-        </button>
-      </div>
-    </div>
+    <section className='w-screen min-h-screen bg-gradient-to-r from-rose-100 to-teal-100'>
+        <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
+            <div className='flex flex-col items-center text-center'>
+                <div className='flex items-center'>
+                    <h1 className='mr-3 text-5xl font-semibold'>Welcome to SaaS File Manager</h1>
+                </div>
+
+                <button className="flex mt-4 text-white semibold rounded p-2 bg-black">
+                    Get Started
+                </button>
+
+                <p className='max-w-xl mt-2 text-lg text-slate-600'>
+                    Your all-in-one solution for managing and organizing your files with the power of AI.
+                </p>
+            </div>
+        </div>
+    </section>
   );
 };
 
