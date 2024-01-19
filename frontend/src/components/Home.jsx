@@ -7,11 +7,11 @@ const Home = () => {
     <section className='w-screen min-h-screen bg-gradient-to-r from-rose-100 to-teal-100'>
         <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
             <div className='flex flex-col items-center text-center'>
-                <div className='flex items-center'>
+                <div className='flex mx-auto p-4 items-center'>
                     <h1 className='mr-3 text-5xl font-semibold'>Welcome to SaaS File Manager</h1>
                 </div>
 
-                <button className="flex mt-4 text-white semibold rounded p-2 bg-black">
+                <button className="flex mt-1 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
                     Get Started
                 </button>
 
