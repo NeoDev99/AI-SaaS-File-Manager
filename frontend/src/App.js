@@ -3,15 +3,18 @@ import React from 'react';
 import Nav from './components/Nav';
 import Home from './components/Home';
 import Page from './components/Page';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
+    <main className="flex min-h-screen flex-col bg-slate-100">
       <Nav />
-      <Home />
-      <Page />
-    </div>
+      <div className='container'>
+        <Home />
+        <Page />
+      </div>
+      <Footer />
+    </main>
   );
-}
-
+};
 export default App;
