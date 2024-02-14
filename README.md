@@ -2,6 +2,19 @@
 
 Welcome to the SaaS AI-based File Manager project! This project combines a Python Flask backend for handling server-side logic with a React frontend for a dynamic user interface.
 
+## Demo Image
+![Demo Website Image](Demo_Image/demo.png)
+
+## Contents
+ * [Prerequisites](#prerequisites)
+ * [Setup](#setup)
+ * [Installation](#installation)
+ * [Dependencies](#dependencies)
+ * [Usage](#usage)
+ * [Contributing](#contributing)
+ * [Contact](#contact)
+ * [License](#license)
+
 ## Getting Started
 
 ### Prerequisites
@@ -60,13 +73,12 @@ index.js: Entry point for the React app.
 
 ### Dependencies
 
-Backend:
+#### Backend:
+* Flask: Web framework for Python.
 
-Flask: Web framework for Python.
-Frontend:
-
-React: JavaScript library for building user interfaces.
-Axios: HTTP client for making requests.
+#### Frontend:
+* React: JavaScript library for building user interfaces.
+* Axios: HTTP client for making requests.
 
 
 ### Usage
@@ -82,17 +94,18 @@ Axios: HTTP client for making requests.
 - Commit your changes: git commit -m 'Add new feature'.
 - Push to the branch: git push origin feature/new-feature.
 - Submit a pull request.
-- License
-- This project is licensed under the MIT License.
 
 
 ### Acknowledgments
 
 - Thanks to the open-source community for their contributions.
 
-Feel free to customize this README to include more details about your project, such as features, usage instructions, and any other relevant information.
+
+### Contact
+
+If you want to contact me you can reach me at [LinkedIn](https://linkedin.com/in/neo-titebe-120536254) or [Instagram](https://instagram.com/9teen_99).
 
 
 ### License
 
-This project is licensed under the MIT License.
+This project is **free to use** and does not contain any license.
