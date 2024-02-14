@@ -98,7 +98,7 @@ index.js: Entry point for the React app.
 
 ### Acknowledgments
 
-- Thanks to the open-source community for their contributions.
+Thanks to the open-source community for their contributions.
 
 
 ### Contact
