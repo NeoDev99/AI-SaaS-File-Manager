@@ -54,7 +54,6 @@ The Flask backend will be running at http://127.0.0.1:5000/.
 2. **Frontend:**
 
     ```bash
-    Copy code
     cd frontend/
     npm install
     npm start
