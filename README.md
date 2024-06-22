@@ -1,7 +1,7 @@
 # SaaS AI-based File Manager
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/UmbrellaSkiies/AI-SaaS-File-Manager)
-![GitHub stars](https://img.shields.io/github/starsUmbrellaSkiies/AI-SaaS-File-Manager?style=social)
+![GitHub stars](https://img.shields.io/github/stars/UmbrellaSkiies/AI-SaaS-File-Manager?style=social)
 ![GitHub repo file count](https://img.shields.io/github/directory-file-count/UmbrellaSkiies/OnlineJobPortal)
 ![GitHub forks](https://img.shields.io/github/forks/UmbrellaSkiies/AI-SaaS-File-Manager?style=social)
 ![GitHub followers](https://img.shields.io/github/followers/UmbrellaSkiies?label=Followers&logoColor=blue&style=flat)
