@@ -7,10 +7,12 @@ export default {
     './src/**/*.ts',
     './src/**/*.tsx',
   ],
-  darkMode: 'media',  // or 'class' depending on your preference
+  darkMode: 'class',  // Make sure this is 'class' to toggle with class
   theme: {
     extend: {},
   },
-  variants: {},
+  variants: {
+    extend: {},
+  },
   plugins: [],
 }
