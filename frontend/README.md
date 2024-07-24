@@ -68,6 +68,26 @@ Make sure you have the following installed:
     The React frontend will be accessible at http://localhost:5173/.
 
 
+## Folder Structure
+
+  ```bash
+  frontend/
+  ├── public/
+  │   ├── index.html
+  │   └── ... (other public assets)
+  │
+  ├── src/
+  │   ├── components/
+  │   │   └── ... (React components)
+  │   ├── App.tsx
+  │   ├── index.tsx
+  │   └── ... (other frontend files)
+  │
+  ├── package.json
+  └── ... (other frontend configuration files)
+  ```
+
+
 ## Dependencies
 
 ### Frontend:
@@ -90,8 +110,23 @@ Make sure you have the following installed:
 
 ## Contributing
 
-  - Fork the repository.
-  - Create a new branch: `git checkout -b feature/new-feature`.
-  - Commit your changes: `git commit -m 'Add new feature'`.
-  - Push to the branch: `git push origin feature/new-feature`.
-  - Submit a pull request.
+  1. Fork the repository.
+  2. Create a new branch: `git checkout -b feature/new-feature`.
+  3. Commit your changes: `git commit -m 'Add new feature'`.
+  4. Push to the branch: `git push origin feature/new-feature`.
+  5. Submit a pull request.
+
+
+### Acknowledgments
+
+Thanks to the open-source community for their contributions.
+
+
+### Contact
+
+If you want to contact me you can reach me at [LinkedIn](https://linkedin.com/in/neo-titebe-120536254) or [Instagram](https://instagram.com/9teen_99).
+
+
+### License
+
+This project is **free to use** and does not contain any license.
