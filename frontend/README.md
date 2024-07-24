@@ -1,90 +1,97 @@
-<p align="center">
-  <a href="https://clerk.com?utm_source=github&utm_medium=clerk_docs" target="_blank" rel="noopener noreferrer">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./public/light-logo.png">
-      <img alt="Clerk Logo for light background" src="./public/dark-logo.png" height="64">
-    </picture>
-  </a>
-  <br />
-</p>
-<div align="center">
-  <h1>
-    Clerk and React Quickstart 
-  </h1>  
-  <a href="https://www.npmjs.com/package/@clerk/clerk-js">
-    <img alt="Downloads" src="https://img.shields.io/npm/dm/@clerk/clerk-js" />
-  </a>
-  <a href="https://discord.com/invite/b5rXHjAg7A">
-    <img alt="Discord" src="https://img.shields.io/discord/856971667393609759?color=7389D8&label&logo=discord&logoColor=ffffff" />
-  </a>
-  <a href="https://twitter.com/clerkdev">
-    <img alt="Twitter" src="https://img.shields.io/twitter/url.svg?label=%40clerkdev&style=social&url=https%3A%2F%2Ftwitter.com%2Fclerkdev" />
-  </a> 
-  <br />
-  <br />
-  <img alt="Clerk Hero Image" src="./public/hero.png">
-</div>
+# SaaS AI-based File Manager Frontend
 
-## Introduction
+![GitHub repo size](https://img.shields.io/github/repo-size/UmbrellaSkiies/AI-SaaS-File-Manager)
+![GitHub stars](https://img.shields.io/github/stars/UmbrellaSkiies/AI-SaaS-File-Manager?style=social)
+![GitHub repo file count](https://img.shields.io/github/directory-file-count/UmbrellaSkiies/AI-SaaS-File-Manager)
+![GitHub forks](https://img.shields.io/github/forks/UmbrellaSkiies/AI-SaaS-File-Manager?style=social)
+![GitHub followers](https://img.shields.io/github/followers/UmbrellaSkiies?label=Followers&logoColor=blue&style=flat)
 
-Clerk is a developer-first authentication and user management solution. It provides pre-built React components and hooks for sign-in, sign-up, user profile, and organization management. Clerk is designed to be easy to use and customize, and can be dropped into any React application.
+Welcome to the SaaS AI-based File Manager frontend project! This project uses React and TypeScript to provide a dynamic user interface for managing files.
 
-After following the quickstart you'll have learned how to:
+## Demo Image
+![Demo Website Image](Demo_Image/demo.png)
 
-- Set up a React app with Vite
-- Install `@clerk/clerk-react`
-- Set environment keys
-- Wrap your React app in `<ClerkProvider />`
-- Embed the `<UserButton />` and `<SignInButton />`
+## Contents
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Setup](#setup)
+  * [Installation](#installation)
+* [Folder Structure](#folder-structure)
+* [Dependencies](#dependencies)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Contact](#contact)
+* [License](#license)
 
-<!-- TODO: Include information about the different branches of this repository -->
+## Getting Started
 
-## Deploy
+### Prerequisites
 
-Easily deploy the template to Vercel with the button below. You will need to set the required environment variables in the Vercel dashboard.
+Make sure you have the following installed:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fclerkinc%2Fclerk-react-quickstart&env=VITE_CLERK_PUBLISHABLE_KEY,CLERK_SECRET_KEY&envDescription=Clerk%20API%20keys&envLink=https%3A%2F%2Fclerk.com%2Fdocs%2Fquickstart%2Freact&redirect-url=https%3A%2F%2Fclerk.com%2Fdocs%2Fquickstart%2Freact)
+- [Node.js](https://nodejs.org/) (with npm or yarn)
 
-## Running the template
+### Setup
 
-```bash
-git clone https://github.com/clerkinc/clerk-react-quickstart
-```
+1. Clone the repository:
 
-To run the example locally, you need to:
+   ```bash
+   git clone https://github.com/UmbrellaSkiies/AI-SaaS-File-Manager.git
+   cd AI-SaaS-File-Manager/frontend
 
-1. Sign up for a Clerk account at [https://clerk.com](https://dashboard.clerk.com/sign-up?utm_source=DevRel&utm_medium=docs&utm_campaign=templates&utm_content=10-24-2023&utm_term=clerk-react-quickstart).
+### Installation
 
-2. Go to the [Clerk dashboard](https://dashboard.clerk.com?utm_source=DevRel&utm_medium=docs&utm_campaign=templates&utm_content=10-24-2023&utm_term=clerk-react-quickstart) and create an application.
+1. Install the dependencies:
 
-3. Set the required Clerk environment variables as shown in [the example `env` file](./.env.sample).
+    ```bash
+    npm install
+    ```
 
-4. `npm install` the required dependencies.
+     or
 
-5. `npm run dev` to launch the development server.
+    ```bash
+    yarn install
+    ```
 
-## Learn more
+2. Start the development server:
 
-To learn more about Clerk and React, check out the following resources:
+    ```bash
+    npm start
+    ```
+  
+    or
+  
+    ```bash
+    yarn start
+    ```
 
-- [Quickstart: Get started with React and Clerk](https://clerk.com/docs/quickstarts/react?utm_source=DevRel&utm_medium=docs&utm_campaign=templates&utm_content=10-24-2023&utm_term=clerk-react-quickstart)
+    The React frontend will be accessible at http://localhost:5173/.
 
-- [Clerk Documentation](https://clerk.com/docs?utm_source=DevRel&utm_medium=docs&utm_campaign=templates&utm_content=10-24-2023&utm_term=clerk-react-quickstart)
-- [Vite Documentation](https://vitejs.dev/guide/)
 
-## Found an issue?
+## Dependencies
 
-If you have found an issue with the quickstart, please create an [issue](https://github.com/clerk/clerk-react-quickstart/issues).
+### Frontend:
 
-If it's a quick fix, such as a misspelled word or a broken link, feel free to skip creating an issue.  
-Go ahead and create a [pull request](https://github.com/clerk/clerk-react-quickstart/pulls) with the solution. :rocket:
+  * React: JavaScript library for building user interfaces.
+  * TypeScript: Typed superset of JavaScript that compiles to plain JavaScript.
+  * Axios: HTTP client for making requests.
+  * React Dropzone: Library for file uploads.
+  * Lucide React: Icon library for React.
+  * React Router DOM: For routing in React applications.
+  * Tailwind CSS: Utility-first CSS framework.
+  * Clerk: User authentication library.
 
-## Want to leave feedback?
 
-Feel free to create an [issue](https://github.com/clerk/clerk-react-quickstart/issues) with the **feedback** label. Our team will take a look at it and get back to you as soon as we can!
+## Usage
 
-## Connect with us
+  * Open your browser and visit http://localhost:5173/.
+  * Drag and drop files onto the screen to organize them using the AI-based File Manager.
 
-You can discuss ideas, ask questions, and meet others from the community in our [Discord](https://discord.com/invite/b5rXHjAg7A).
 
-If you prefer, you can also find support through our [Twitter](https://twitter.com/ClerkDev), or you can [email](mailto:support@clerk.dev) us!
+## Contributing
+
+  - Fork the repository.
+  - Create a new branch: `git checkout -b feature/new-feature`.
+  - Commit your changes: `git commit -m 'Add new feature'`.
+  - Push to the branch: `git push origin feature/new-feature`.
+  - Submit a pull request.
