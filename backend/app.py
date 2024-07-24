@@ -1,8 +1,7 @@
-from flask import Flask, request, jsonify, send_from_directory, render_template, render_template_string
-# ----------------------------------  Ab / Bl lines  -----------------------------------------
-from flask import Flask, jsonify, send_from_directory, redirect
+from flask import Flask, request, jsonify, send_from_directory, render_template, redirect
 from flask_cors import CORS
 import os
+import shutil  # Import shutil for removing directories
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
@@ -14,22 +13,10 @@ CORS(app)  # Enable CORS for all routes
 def home():
     return redirect('http://localhost:5173')  # Assuming your front-end runs on port 5173
 
-@app.route('/favicon.ico') # Fix the favicon icons
+@app.route('/favicon.ico')  # Fix the favicon icons
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),
                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
-
-# ---------------------------------------------------------------------------------
-# Testing Routes
-# ---------------------------------------------------------------------------------
-
-@app.route('/forbidden')
-def forbidden_test():
-    return "Forbidden", 403
-
-@app.route('/test-method', methods=['GET'])
-def test_method():
-    return "Test GET request method"
 
 # ---------------------------------------------------------------------------------
 
@@ -50,6 +37,10 @@ def get_file_size(file_path):
     else:
         return f"{size_in_bytes / (1024 * 1024):.2f} MB"
 
+# ---------------------------------------------------------------------------------
+# Uploading a file Function
+# ---------------------------------------------------------------------------------
+
 @app.route('/upload', methods=['POST'])
 def upload_files():
     if 'files' not in request.files:
@@ -63,15 +54,24 @@ def upload_files():
 
     return jsonify({'message': 'Files uploaded successfully'})
 
+# ---------------------------------------------------------------------------------
+# Listing files and folders Function
+# ---------------------------------------------------------------------------------
+
 @app.route('/list_files', methods=['GET'])
 def list_files():
-    files = os.listdir(app.config['UPLOAD_FOLDER'])
-    file_list = []
-    for file_name in files:
-        file_path = os.path.join(app.config['UPLOAD_FOLDER'], file_name)
-        file_size = get_file_size(file_path)
-        file_list.append({'name': file_name, 'size': file_size})
-    return jsonify({'files': file_list})
+    items = os.listdir(app.config['UPLOAD_FOLDER'])
+    item_list = []
+    for item_name in items:
+        item_path = os.path.join(app.config['UPLOAD_FOLDER'], item_name)
+        if os.path.isdir(item_path):
+            item_type = 'folder'
+            item_size = None
+        else:
+            item_type = 'file'
+            item_size = get_file_size(item_path)
+        item_list.append({'name': item_name, 'size': item_size, 'type': item_type})
+    return jsonify({'files': item_list})
 
 @app.route('/file_stats', methods=['GET'])
 def file_stats():
@@ -81,8 +81,8 @@ def file_stats():
     return jsonify({'totalFiles': total_files, 'totalSize': total_size})
 
 # ---------------------------------------------------------------------------------
-# Renaming a file Function
-# ---------------------------------------------------------------------------------
+# Renaming a file Function 
+# --------------------------------------------------------------------------------- 
 
 @app.route('/rename_file', methods=['POST'])
 def rename_file():
@@ -131,6 +131,53 @@ def delete_file():
         return jsonify({'message': f'File {file_name} deleted successfully'}), 200
     else:
         return jsonify({'message': f'File {file_name} not found'}), 404
+
+# ---------------------------------------------------------------------------------
+# Creating a folder Function
+# ---------------------------------------------------------------------------------
+
+@app.route('/create_folder', methods=['POST'])
+def create_folder():
+    data = request.get_json()
+    folder_name = data.get('folder')
+
+    if not folder_name:
+        return jsonify({'message': 'Folder name not provided'}), 400
+
+    folder_path = os.path.join(app.config['UPLOAD_FOLDER'], folder_name)
+
+    if os.path.exists(folder_path):
+        return jsonify({'message': f'Folder {folder_name} already exists'}), 400
+
+    try:
+        os.makedirs(folder_path)
+        return jsonify({'message': f'Folder {folder_name} created successfully'}), 200
+    except Exception as e:
+        return jsonify({'message': f'Error creating folder: {e}'}), 500
+
+# ---------------------------------------------------------------------------------
+# Deleting a folder Function
+# ---------------------------------------------------------------------------------
+
+@app.route('/delete_folder', methods=['POST'])
+def delete_folder():
+    data = request.get_json()
+    folder_name = data.get('folder')
+
+    if not folder_name:
+        return jsonify({'message': 'Folder name not provided'}), 400
+
+    folder_path = os.path.join(app.config['UPLOAD_FOLDER'], folder_name)
+
+    if os.path.exists(folder_path):
+        try:
+            shutil.rmtree(folder_path)
+            return jsonify({'message': f'Folder {folder_name} deleted successfully'}), 200
+        except Exception as e:
+            return jsonify({'message': f'Error deleting folder: {e}'}), 500
+    else:
+        return jsonify({'message': f'Folder {folder_name} not found'}), 404
+
 
 # ---------------------------------------------------------------------------------
 # Error Handlers
