@@ -5,9 +5,11 @@ import './styles/globals.css';
 
 import Nav from './components/Nav';
 import Home from "./pages/Home";
+{/*import Footer from './components/Footer';*/}
 import FileManager from "./components/FileManager";
 import SignIn from "./pages/SignIn";
 import ContactPage from "./pages/ContactPage";
+import About from './pages/About';
 
 function App() {
   return (
@@ -24,10 +26,12 @@ function App() {
             } />
             <Route path="/sign-in" element={<SignIn />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/about" element={<About />} />
             <Route path="*" element={<RedirectToSignIn />} />
           </Routes>
         </div>
-        
+
+        {/*<Footer />*/}
       </div>
     </Router>
   );

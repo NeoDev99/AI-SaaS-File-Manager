@@ -23,7 +23,6 @@ const FileManager: React.FC = () => {
   };
 
   const handleFileChange = () => {
-    // Update total files and total size after file operation
     refreshStats();
   };
 
@@ -36,11 +35,11 @@ const FileManager: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-rose-100 to-teal-100 min-h-screen flex items-center justify-center pt-24 pb-12">
-      <div className="bg-white p-8 rounded shadow-md max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl min-w-[70vw] relative">
-        <h1 className="text-2xl pb-2 mb-4">SaaS AI-based File Manager</h1>
+    <div className="min-h-screen flex items-center justify-center pt-24 pb-12 bg-gradient-to-r from-rose-100 to-teal-100 dark:from-gray-800 dark:to-gray-900">
+      <div className="bg-white dark:bg-gray-800 p-8 rounded shadow-md max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl min-w-[70vw] relative">
+        <h1 className="text-2xl pb-2 mb-4 text-gray-900 dark:text-gray-100">SaaS AI-based File Manager</h1>
 
-        <div className="flex items-center mb-4">
+        <div className="flex items-center mb-4 text-gray-900 dark:text-gray-100">
           <span className="mr-2">Sort</span>
           <ArrowDownUp className="mr-2" />
           <div className="ml-auto flex flex-col text-right">
@@ -49,7 +48,7 @@ const FileManager: React.FC = () => {
           </div>
         </div>
 
-        <div className='border-dashed border-2 mt-4 p-4'>
+        <div className="border-dashed border-2 border-gray-300 dark:border-gray-600 mt-4 p-4">
           <FileViewer onFileChange={handleFileChange} />
         </div>
       </div>

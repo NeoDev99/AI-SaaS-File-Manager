@@ -8,7 +8,7 @@ const Home: React.FC = () => {
   const { user } = useUser();
 
   return (
-    <section className='w-screen min-h-screen bg-gradient-to-r from-rose-100 to-teal-100'>
+    <section className='w-screen min-h-screen bg-gradient-to-r from-rose-100 to-teal-100 dark:from-gray-800 dark:to-gray-900'>
       <div className='container mx-auto pt-20 pb-4'>
         <div className='flex flex-col items-center text-center'>
           <div className='flex mx-auto p-4 items-center'>
@@ -27,7 +27,7 @@ const Home: React.FC = () => {
             Your all-in-one solution for managing and organizing your files with the power of AI.
           </p>
 
-          <div className='w-full max-w-3xl mt-4 border-dashed border-2 rounded-xl'>
+          <div className='w-full max-w-3xl mt-4 border-dashed border-2 rounded-xl dark:border-gray-800'>
             <FileUpload />
           </div>
 

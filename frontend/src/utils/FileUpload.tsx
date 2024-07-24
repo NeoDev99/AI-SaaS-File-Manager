@@ -101,9 +101,9 @@ const FileUpload: React.FC = () => {
   });
 
   return (
-    <div className='p-4 bg-white rounded-xl'>
+    <div className='p-4 bg-white dark:bg-gray-900 rounded-xl'>
       <div {...getRootProps({
-        className: `border-dashed border-2 hover:border-blue-400 cursor-pointer rounded-xl bg-gray-50 py-10 flex justify-center items-center flex-col ${!isSignedIn && 'opacity-50 cursor-not-allowed cursor-mouse hover:border-gray-200'}`,
+        className: `border-dashed border-2 hover:border-blue-400 dark:border-gray-600 dark:hover:border-blue-400 cursor-pointer rounded-xl bg-gray-50 dark:bg-gray-800 py-10 flex justify-center items-center flex-col ${!isSignedIn && 'opacity-50 cursor-not-allowed cursor-mouse hover:border-gray-200 dark:hover:border-gray-600'}`,
         onClick: !isSignedIn ? (e) => { e.preventDefault(); navigate('/sign-in'); } : undefined,
       })}>
         <input {...getInputProps()} />
@@ -122,8 +122,8 @@ const FileUpload: React.FC = () => {
           </div>
           <div className="mt-4">
             {uploadingFiles.map((uploadingFile, index) => (
-              <div key={index} className="mt-2 p-2 border rounded">
-                <p className="text-sm text-gray-600">{uploadingFile.file.name}</p>
+              <div key={index} className="mt-2 p-2 border rounded dark:border-gray-800">
+                <p className="text-sm text-gray-600 dark:text-white">{uploadingFile.file.name}</p>
                 <p className="text-sm text-gray-600">Progress: {uploadingFile.progress}%</p>
                 <p className="text-sm text-gray-600">
                   {uploadingFile.status === 'uploading' ? 'Uploading...' : `${formatBytes(uploadingFile.size)} • `}
