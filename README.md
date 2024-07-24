@@ -35,7 +35,7 @@ Make sure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/UmbrellaSkiies/your-repo.git
+   git clone https://github.com/UmbrellaSkiies/AI-SaaS-File-Manager.git
    ```
 
 ### Installation
@@ -59,7 +59,7 @@ The Flask backend will be running at http://127.0.0.1:5000/.
     npm start
     ```
 
-    The React frontend will be accessible at http://localhost:3000/.
+    The React frontend will be accessible at http://localhost:5173/.
 
 
 ### Folder Structure
