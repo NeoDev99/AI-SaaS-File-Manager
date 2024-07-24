@@ -12,16 +12,19 @@ Welcome to the SaaS AI-based File Manager frontend project! This project uses Re
 ![Demo Website Image](Demo_Image/demo.png)
 
 ## Contents
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Setup](#setup)
-  * [Installation](#installation)
-* [Folder Structure](#folder-structure)
-* [Dependencies](#dependencies)
-* [Usage](#usage)
-* [Contributing](#contributing)
-* [Contact](#contact)
-* [License](#license)
+- [SaaS AI-based File Manager Frontend](#saas-ai-based-file-manager-frontend)
+  - [Demo Image](#demo-image)
+  - [Contents](#contents)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+  - [Dependencies](#dependencies)
+    - [Frontend:](#frontend)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+    - [Acknowledgments](#acknowledgments)
+    - [Contact](#contact)
+    - [License](#license)
 
 ## Getting Started
 
