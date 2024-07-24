@@ -12,14 +12,16 @@ Welcome to the SaaS AI-based File Manager project! This project combines a Pytho
 ![Demo Website Image](Demo_Image/demo.png)
 
 ## Contents
- * [Prerequisites](#prerequisites)
- * [Setup](#setup)
- * [Installation](#installation)
- * [Dependencies](#dependencies)
- * [Usage](#usage)
- * [Contributing](#contributing)
- * [Contact](#contact)
- * [License](#license)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Setup](#setup)
+  * [Installation](#installation)
+* [Folder Structure](#folder-structure)
+* [Dependencies](#dependencies)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Contact](#contact)
+* [License](#license)
 
 ## Getting Started
 
@@ -64,22 +66,47 @@ The Flask backend will be running at http://127.0.0.1:5000/.
 
 ### Folder Structure
 
-backend/: Contains the Flask backend code.
-
-app.py: Entry point for the backend application.
-frontend/my-react-app/: Contains the React frontend code.
-
-public/: Static assets.
-src/: React components and application logic.
-App.js: Main React component.
-index.js: Entry point for the React app.
-...
+```
+AI-SaaS-File-Manager/
+│
+├── backend/
+│   ├── static/
+│   ├── templates/
+│   ├── uploads/
+│   ├── app.py
+│   ├── requirements.txt
+│   └── ... (other backend files)
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── ... (React components)
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── ... (other frontend files)
+│   ├── package.json
+│   └── ... (other frontend configuration files)
+│
+├── Demo_Image/
+│   └── demo.png
+│
+├── README.md
+└── ... (other project files)
+```
 
 
 ### Dependencies
 
 #### Backend:
 * Flask: Web framework for Python.
+* flask_cors: To handle CORS.
+* Werkzeug: WSGI utility library.
+* requests: To make HTTP requests (if needed).
+* Jinja2: Templating engine for Flask.
+* MarkupSafe: Provides security for Jinja2.
+* python-dotenv: To load environment variables from a .env file.
+* shutil: High-level file operations.
 
 #### Frontend:
 * React: JavaScript library for building user interfaces.
@@ -88,16 +115,16 @@ index.js: Entry point for the React app.
 
 ### Usage
 
-- Open your browser and visit http://localhost:3000/
+- Open your browser and visit http://localhost:5173/
 - Drag and drop files onto the screen to organize them using the AI-based File Manager.
 
 
 ### Contributing
 
 - Fork the repository.
-- Create a new branch: git checkout -b feature/new-feature.
-- Commit your changes: git commit -m 'Add new feature'.
-- Push to the branch: git push origin feature/new-feature.
+- Create a new branch: `git checkout -b feature/new-feature`.
+- Commit your changes: `git commit -m 'Add new feature'`.
+- Push to the branch: `git push origin feature/new-feature`.
 - Submit a pull request.
 
 
